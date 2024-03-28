@@ -14,11 +14,12 @@ class Student {
 
 // Định nghĩa lớp Teacher
 class Teacher {
+  int TeacherId;
   String name;
   String subject;
 
   // Constructor của lớp Teacher
-  Teacher(this.name, this.subject);
+  Teacher(this.TeacherId,this.name, this.subject);
 }
 
 // Định nghĩa lớp Classroom
@@ -33,7 +34,7 @@ class Classroom {
   // Phương thức để hiển thị thông tin lớp học
   void displayInfo() {
     print('Class: $className');
-    print('Teacher: ${teacher.name}, Subject: ${teacher.subject}');
+    print('TeacherId: ${teacher.TeacherId},Name : ${teacher.name}, Subject: ${teacher.subject}');
     print('Students:');
     for (var student in students) {
       print(' - ID: ${student.id}, Name: ${student.name}, Age: ${student.age}, Subject: ${student.subject}, GPA: ${student.gpa}, Height: ${student.height}, Weight: ${student.weight}');
@@ -72,10 +73,10 @@ class Principal {
 void main() {
   // Tạo đối tượng giáo viên
   var teachers = [
-    Teacher('Teacher1', 'Math'),
-    Teacher('Teacher2', 'English'),
-    Teacher('Teacher3', 'Science'),
-    Teacher('Teacher4', 'History'),
+    Teacher(1,'Mark Maton', 'Math'),
+    Teacher(2,'Violet Scrum', 'English'),
+    Teacher(3,'Chalender Sivlerd', 'Science'),
+    Teacher(4,'Kim Lee', 'History'),
   ];
 
   // Tạo đối tượng học sinh
